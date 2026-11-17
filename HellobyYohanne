@@ -1,1608 +1,488 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Yohanne Rei's Magic Carousel Baptismal Invitation</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Great Vibes, Playfair Display, Quicksand, Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'sky-pastel': '#E6F4FF',
-                        'sky-card': '#D6ECFF',
-                        'sky-accent': '#4A90E2',
-                        'pink-dusty': '#F5C2D1',
-                        'pink-deep': '#E07A9A',
-                        'cream-base': '#FFFDF7',
-                        'gold-antique': '#D4AF37',
-                        'gold-light': '#F3E5AB',
-                        'navy-slate': '#24364B',
-                    },
-                    fontFamily: {
-                        'script': ['"Great Vibes"', 'cursive'],
-                        'serif-royal': ['"Playfair Display"', 'serif'],
-                        'whimsy': ['"Quicksand"', 'sans-serif'],
-                        'sans': ['"Inter"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
+    <title>Baby Yohanne Rei's Baptismal Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        /* Base & Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #f0f4f8;
+            --accent-color: #ffb7b2;
+            --text-color: #2c3e50;
+            --white: #ffffff;
+            --soft-pink: #ffe6eb;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         body {
-            background: linear-gradient(180deg, #E8F5FF 0%, #FFFDF7 35%, #F2F9FF 70%, #FFF5F8 100%);
-            color: #24364B;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #e3eeff 0%, #f3e7e8 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow-x: hidden;
         }
 
-        /* Gold Foil Text Gradient */
-        .gold-text-gradient {
-            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 45%, #F5D76E 70%, #AA771C 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Envelope Floating & Gentle Wobble Animation */
-        @keyframes envelopeFloatWobble {
-            0%, 100% {
-                transform: translateY(0px) rotate(-1.2deg);
-            }
-            25% {
-                transform: translateY(-9px) rotate(1deg);
-            }
-            50% {
-                transform: translateY(-4px) rotate(-0.8deg);
-            }
-            75% {
-                transform: translateY(-11px) rotate(1.3deg);
-            }
-        }
-        .animate-envelope {
-            animation: envelopeFloatWobble 4.5s ease-in-out infinite;
-        }
-
-        /* Wax Seal Pulse Glow */
-        @keyframes sealPulse {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7), 0 10px 25px rgba(180, 134, 11, 0.45);
-            }
-            50% {
-                transform: scale(1.08);
-                box-shadow: 0 0 0 14px rgba(212, 175, 55, 0), 0 14px 30px rgba(180, 134, 11, 0.65);
-            }
-        }
-        .animate-seal {
-            animation: sealPulse 2.2s infinite ease-in-out;
-        }
-
-        /* Teddy Bear Flying / Floating Animation */
-        @keyframes teddyFloat {
-            0%, 100% { transform: translateY(0px) rotate(-3deg); }
-            50% { transform: translateY(-14px) rotate(4deg); }
-        }
-        .animate-teddy {
-            animation: teddyFloat 3.6s ease-in-out infinite;
-        }
-
-        /* Carousel Gallop Animations */
-        @keyframes gallopUp {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-        }
-        @keyframes gallopDown {
-            0%, 100% { transform: translateY(-12px); }
-            50% { transform: translateY(0px); }
-        }
-        .horse-up {
-            animation: gallopUp 2.2s ease-in-out infinite;
-        }
-        .horse-down {
-            animation: gallopDown 2.2s ease-in-out infinite;
-        }
-
-        /* Twinkling Fairy Lights & Stars */
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.35; transform: scale(0.85); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-        .twinkle-light {
-            animation: twinkle 1.8s ease-in-out infinite;
-        }
-
-        /* Boat Rocking on Waves */
-        @keyframes boatRock {
-            0%, 100% { transform: translateY(0px) rotate(-3.5deg); }
-            50% { transform: translateY(-7px) rotate(3.5deg); }
-        }
-        .animate-boat {
-            transform-origin: center center;
-            animation: boatRock 3.2s ease-in-out infinite;
-        }
-
-        /* Bouncing Heart Inside Envelope */
-        @keyframes heartBounce {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            40% { transform: translateY(-14px) scale(1.15); }
-            65% { transform: translateY(-4px) scale(0.95); }
-        }
-        .animate-heart-bounce {
-            animation: heartBounce 1.8s ease-in-out infinite;
-        }
-
-        /* Chimney Smoke / Floating Hearts Rise */
-        @keyframes floatUpSlow {
-            0% { transform: translateY(0) scale(0.8); opacity: 0; }
-            30% { opacity: 0.9; }
-            100% { transform: translateY(-28px) scale(1.2); opacity: 0; }
-        }
-        .animate-rise {
-            animation: floatUpSlow 3s ease-out infinite;
-        }
-
-        /* Floating Background Particles */
-        @keyframes driftStar {
-            0% { transform: translateY(0px) rotate(0deg); opacity: 0.4; }
-            50% { transform: translateY(-18px) rotate(180deg); opacity: 0.95; }
-            100% { transform: translateY(0px) rotate(360deg); opacity: 0.4; }
-        }
-        .bg-particle {
-            animation: driftStar 6s ease-in-out infinite;
-        }
-
-        /* Envelope Opening Transition */
-        .envelope-flap {
-            transform-origin: top center;
-            transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .envelope-opened .envelope-flap {
-            transform: rotateX(180deg);
-        }
-        .envelope-opened .letter-peek {
-            transform: translateY(-45px);
-        }
-
-        /* Royal Card Styling */
-        .royal-card {
-            background: rgba(255, 253, 247, 0.92);
-            backdrop-filter: blur(8px);
-            border: 2px solid rgba(212, 175, 55, 0.45);
-            box-shadow: 0 12px 35px -8px rgba(36, 54, 75, 0.1), 0 0 0 4px rgba(255, 255, 255, 0.65);
-        }
-
-        /* Sparkle Burst Particle */
-        .burst-dot {
+        /* ENVELOPE INTRO SCREEN */
+        #envelope-screen {
             position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            font-size: 1.35rem;
-            transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(240, 244, 248, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .envelope-wrapper {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            animation: bounceEnvelope 2s infinite ease-in-out;
+            border: 2px dashed var(--primary-color);
+            position: relative;
+        }
+        @keyframes bounceEnvelope {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .envelope-wrapper h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        .seal-btn {
+            background: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 183, 178, 0.4);
+            transition: transform 0.2s, background 0.2s;
+            margin-top: 15px;
+        }
+        .seal-btn:hover {
+            transform: scale(1.05);
+            background: #ff9994;
+        }
+
+        /* MAIN INVITATION CONTAINER */
+        .invitation-container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--white);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border-radius: 25px;
+            margin: 20px;
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .header {
+            text-align: center;
+            padding: 35px 20px;
+            background: linear-gradient(135deg, #e3eeff 0%, #f3e7e8 100%);
+        }
+        .theme-badge {
+            display: inline-block;
+            background: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        /* CAROUSEL BANNER */
+        .carousel-banner {
+            width: 100%;
+            height: 240px;
+            background: #ffe6eb;
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: pulseZoom 10s infinite alternate;
+        }
+        @keyframes pulseZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        .content {
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        /* COUNTDOWN SECTION */
+        .countdown-box {
+            background: #eef4fb;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #d0e1fd;
+        }
+        .countdown-box h3 {
+            font-size: 1rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif;
+        }
+        #countdown {
+            font-weight: 700;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        /* DETAILS BOXES */
+        .details-box {
+            background: #fafbfc;
+            border: 1px solid #eaeaea;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .details-box h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .details-box p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        /* ATTIRE GUIDE */
+        .attire-section {
+            background: #fff9fa;
+            border: 1px dashed var(--accent-color);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .attire-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        /* GODPARENTS SECTION */
+        .godparents-section {
+            background: #f7f9fc;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            text-align: left;
+            border: 1px solid #e1e8ed;
+        }
+        .godparents-section h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        .gp-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+        .gp-col h4 {
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+        }
+        .gp-col ol {
+            padding-left: 18px;
+            color: #555;
+        }
+
+        /* HEARTFELT MESSAGES */
+        .message-box {
+            background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 15px;
+            text-align: center;
+            font-style: italic;
+            color: #37474f;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            border: 1px solid #f8bbd0;
+        }
+        .message-box strong {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+
+        /* GIFT GUIDE */
+        .gift-guide {
+            background: #fafbfc;
+            border: 1px solid #eaeaea;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            text-align: left;
+        }
+        .gift-table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        .gift-table th, .gift-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+        .gift-table th {
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* MUSIC PLAYER */
+        .music-player {
+            margin: 20px 0 10px 0;
+            padding: 10px;
+            background: #fff5f5;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            color: #d63384;
+            text-align: center;
         }
     </style>
 </head>
-<body class="min-h-screen relative selection:bg-sky-card selection:text-navy-slate">
+<body>
 
-    <!-- ===================================================================== -->
-    <!-- FLOATING MUSIC TOGGLE & QUICK CUSTOMIZE CONTROLS                      -->
-    <!-- ===================================================================== -->
-    <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
-        <button id="music-toggle-btn"
-                onclick="toggleMusic()"
-                aria-label="Toggle Background Music"
-                class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-cream-base/95 border-2 border-gold-antique shadow-lg text-navy-slate font-whimsy font-bold text-xs sm:text-sm hover:scale-105 active:scale-95 transition">
-            <span id="music-icon" class="text-base">🎵</span>
-            <span id="music-label" class="hidden sm:inline">Music: Off</span>
-        </button>
-    </div>
-
-    <!-- Ambient Twinkling Background Stars & Pastel Hearts -->
-    <div id="ambient-sky" class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true"></div>
-
-    <!-- ===================================================================== -->
-    <!-- INTRO OVERLAY: ANIMATED TEDDY BEAR & SEALED MAGIC ENVELOPE            -->
-    <!-- ===================================================================== -->
-    <div id="intro-overlay"
-         class="fixed inset-0 z-40 flex flex-col items-center justify-center px-4 py-6 bg-gradient-to-b from-[#CBE8FF] via-[#EAF6FF] to-[#FCE4EC] transition-all duration-1000 overflow-y-auto">
-
-        <!-- Magical Floating Clouds & Stars Top -->
-        <div class="max-w-lg w-full flex flex-col items-center text-center relative my-auto">
-
-            <!-- Top Magical Banner & Flying Teddy Bear with Wand -->
-            <div class="relative flex flex-col items-center mb-3">
-                <!-- Animated Flying Cartoon Teddy Bear SVG -->
-                <div class="animate-teddy relative z-10 drop-shadow-md">
-                    <svg class="w-28 h-28 sm:w-32 sm:h-32" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Magical Sparkle Trail -->
-                        <circle cx="28" cy="46" r="4" fill="#F5D76E" class="twinkle-light"/>
-                        <circle cx="152" cy="38" r="5" fill="#F59E0B" class="twinkle-light" style="animation-delay:0.4s"/>
-                        <path d="M148 54L151 61L158 64L151 67L148 74L145 67L138 64L145 61L148 54Z" fill="#D4AF37" class="twinkle-light"/>
-                        <!-- Pastel Blue Balloon Behind Teddy -->
-                        <line x1="52" y1="68" x2="66" y2="108" stroke="#D4AF37" stroke-width="2" stroke-dasharray="3 2"/>
-                        <ellipse cx="46" cy="48" rx="18" ry="22" fill="#8ECAE6" stroke="#FFFFFF" stroke-width="2"/>
-                        <ellipse cx="41" cy="41" rx="4" ry="7" fill="#FFFFFF" fill-opacity="0.55" transform="rotate(-15 41 41)"/>
-                        <!-- Teddy Ears -->
-                        <circle cx="67" cy="64" r="14" fill="#C68B59"/>
-                        <circle cx="67" cy="64" r="8" fill="#F3D5B5"/>
-                        <circle cx="113" cy="64" r="14" fill="#C68B59"/>
-                        <circle cx="113" cy="64" r="8" fill="#F3D5B5"/>
-                        <!-- Little Royal Crown -->
-                        <path d="M78 49L83 37L90 45L97 37L102 49H78Z" fill="#F5D76E" stroke="#B8860B" stroke-width="1.5"/>
-                        <!-- Teddy Body -->
-                        <ellipse cx="90" cy="126" rx="28" ry="26" fill="#C68B59"/>
-                        <ellipse cx="90" cy="128" rx="18" ry="17" fill="#F3D5B5"/>
-                        <!-- Baby Blue Bowtie -->
-                        <path d="M80 107L90 112L80 117V107Z" fill="#4A90E2"/>
-                        <path d="M100 107L90 112L100 117V107Z" fill="#4A90E2"/>
-                        <circle cx="90" cy="112" r="3.5" fill="#F5D76E"/>
-                        <!-- Teddy Arms (Left holding balloon, Right holding magic star wand) -->
-                        <ellipse cx="61" cy="116" rx="13" ry="8" transform="rotate(-25 61 116)" fill="#C68B59"/>
-                        <ellipse cx="119" cy="112" rx="14" ry="8" transform="rotate(-35 119 112)" fill="#C68B59"/>
-                        <!-- Magic Star Wand -->
-                        <line x1="126" y1="106" x2="146" y2="76" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M146 64L149.5 72L158 73L151.5 78.5L153.5 87L146 82.5L138.5 87L140.5 78.5L134 73L142.5 72L146 64Z" fill="#F5D76E" stroke="#B8860B" stroke-width="1.2"/>
-                        <!-- Teddy Head -->
-                        <circle cx="90" cy="82" r="26" fill="#C68B59"/>
-                        <!-- Muzzle -->
-                        <ellipse cx="90" cy="89" rx="12" ry="9" fill="#F3D5B5"/>
-                        <!-- Eyes & Rosy Cheeks -->
-                        <circle cx="80" cy="79" r="3" fill="#24364B"/>
-                        <circle cx="81" cy="78" r="1" fill="#FFFFFF"/>
-                        <circle cx="100" cy="79" r="3" fill="#24364B"/>
-                        <circle cx="101" cy="78" r="1" fill="#FFFFFF"/>
-                        <ellipse cx="73" cy="86" rx="4" ry="2.5" fill="#F5A3B7" fill-opacity="0.75"/>
-                        <ellipse cx="107" cy="86" rx="4" ry="2.5" fill="#F5A3B7" fill-opacity="0.75"/>
-                        <!-- Cute Nose & Smile -->
-                        <ellipse cx="90" cy="86" rx="4" ry="2.8" fill="#5C3A21"/>
-                        <path d="M85 92Q90 96 95 92" stroke="#5C3A21" stroke-width="2" stroke-linecap="round"/>
-                        <!-- Teddy Feet -->
-                        <ellipse cx="74" cy="148" rx="11" ry="8" fill="#B07647"/>
-                        <ellipse cx="74" cy="148" rx="6" ry="4.5" fill="#F3D5B5"/>
-                        <ellipse cx="106" cy="148" rx="11" ry="8" fill="#B07647"/>
-                        <ellipse cx="106" cy="148" rx="6" ry="4.5" fill="#F3D5B5"/>
-                    </svg>
-                </div>
-
-                <span class="px-4 py-1 rounded-full bg-white/85 border border-gold-antique/50 text-sky-accent font-whimsy font-bold text-xs tracking-widest uppercase shadow-sm -mt-2">
-                    ✨ Magic Carousel Baptism ✨
-                </span>
-            </div>
-
-            <!-- LARGE ANIMATED SEALED ENVELOPE -->
-            <div id="magic-envelope-wrapper" class="animate-envelope w-full max-w-md mx-auto relative select-none">
-                <!-- Decorative Floating Hearts & Stars around Envelope -->
-                <span class="absolute -left-2 top-8 text-2xl animate-bounce" aria-hidden="true">💙</span>
-                <span class="absolute -right-2 top-10 text-2xl animate-bounce" style="animation-delay: 0.5s;" aria-hidden="true">💗</span>
-                <span class="absolute left-6 -bottom-4 text-xl twinkle-light" aria-hidden="true">⭐</span>
-                <span class="absolute right-6 -bottom-4 text-xl twinkle-light" style="animation-delay: 0.7s;" aria-hidden="true">✨</span>
-
-                <!-- Envelope Body -->
-                <div class="relative w-full aspect-[16/11] bg-gradient-to-br from-[#FFFDF7] via-[#FDF6E4] to-[#F7E8C8] rounded-3xl border-[3px] border-gold-antique shadow-[0_22px_50px_rgba(36,54,75,0.22)] overflow-hidden flex flex-col items-center justify-center p-5">
-
-                    <!-- Inner Gold Filigree Border -->
-                    <div class="absolute inset-2.5 rounded-2xl border border-dashed border-gold-antique/60 pointer-events-none"></div>
-
-                    <!-- Peeking Card Inside (slides up on open) -->
-                    <div class="letter-peek absolute inset-x-6 top-6 bottom-6 bg-sky-pastel rounded-xl border border-gold-antique/40 flex items-center justify-center transition-transform duration-700 pointer-events-none">
-                        <p class="font-script text-2xl text-navy-slate">Baby Yohanne Rei</p>
-                    </div>
-
-                    <!-- Envelope Side & Bottom Fold Lines (SVG) -->
-                    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 275" preserveAspectRatio="none">
-                        <!-- Left Flap -->
-                        <polygon points="0,0 190,145 0,275" fill="#FBF2DC" fill-opacity="0.85" stroke="#D4AF37" stroke-width="1.2"/>
-                        <!-- Right Flap -->
-                        <polygon points="400,0 210,145 400,275" fill="#FBF2DC" fill-opacity="0.85" stroke="#D4AF37" stroke-width="1.2"/>
-                        <!-- Bottom Flap -->
-                        <polygon points="0,275 200,132 400,275" fill="#FFFDF7" stroke="#D4AF37" stroke-width="1.5"/>
-                    </svg>
-
-                    <!-- Top Envelope Flap -->
-                    <div class="envelope-flap absolute top-0 inset-x-0 h-[56%] pointer-events-none z-10">
-                        <svg class="w-full h-full drop-shadow-md" viewBox="0 0 400 155" preserveAspectRatio="none">
-                            <polygon points="0,0 400,0 200,150" fill="url(#flapGrad)" stroke="#D4AF37" stroke-width="2"/>
-                            <defs>
-                                <linearGradient id="flapGrad" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="0%" stop-color="#FFFDF7"/>
-                                    <stop offset="100%" stop-color="#F5E4BE"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-
-                    <!-- Envelope Front Text & Clickable Wax Seal -->
-                    <div class="relative z-20 flex flex-col items-center justify-center mt-2">
-                        <p class="font-serif-royal font-bold text-xl sm:text-2xl tracking-wider gold-text-gradient drop-shadow-sm uppercase">
-                            YOU ARE INVITED!
-                        </p>
-                        <p class="font-whimsy text-xs sm:text-sm font-bold text-navy-slate/80 mt-0.5">
-                            Baby Yohanne Rei's Holy Baptism
-                        </p>
-
-                        <!-- CLICKABLE GOLDEN CAROUSEL WAX SEAL -->
-                        <button id="open-seal-btn"
-                                onclick="openMagicEnvelope(event)"
-                                class="animate-seal mt-3 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#F7DF8B] via-[#D4AF37] to-[#9E7614] border-4 border-[#FFF8DC] flex flex-col items-center justify-center text-white cursor-pointer focus:outline-none group relative"
-                                aria-label="Click the seal to open invitation">
-                            <span class="absolute inset-1.5 rounded-full border border-white/60"></span>
-                            <span class="text-2xl sm:text-3xl group-hover:scale-110 transition-transform">🎠</span>
-                            <span class="text-[9px] sm:text-[10px] font-whimsy font-extrabold tracking-widest uppercase text-[#FFFDF7] drop-shadow">
-                                OPEN
-                            </span>
-                        </button>
-
-                        <span class="mt-2.5 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 border border-gold-antique/50 text-navy-slate font-whimsy font-bold text-xs shadow-sm">
-                            ✨ (Click the seal to open) ✨
-                        </span>
-                    </div>
-                </div>
-            </div>
+    <!-- INTERACTIVE ENVELOPE INTRO -->
+    <div id="envelope-screen">
+        <div class="envelope-wrapper">
+            <div style="font-size: 3rem; margin-bottom: 10px;">💌</div>
+            <h2>You Are Invited!</h2>
+            <p style="color: #666; font-size: 0.95rem;">Celebration of Holy Baptism of Baby Yohanne Rei</p>
+            <button class="seal-btn" onclick="openInvitation()">✨ Click the Seal to Open ✨</button>
         </div>
     </div>
 
-    <!-- ===================================================================== -->
-    <!-- MAIN INVITATION CONTENT (REVEALED AFTER OPENING ENVELOPE)             -->
-    <!-- ===================================================================== -->
-    <main id="main-invitation" class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 pt-16 pb-20 space-y-10 sm:space-y-14 opacity-0 transition-opacity duration-1000">
+    <!-- MAIN INVITATION -->
+    <div class="invitation-container" id="main-invitation">
+        <div class="header">
+            <span class="theme-badge">✨ MAGIC CAROUSEL THEME ✨</span>
+            <h1>Yohanne Rei</h1>
+            <p class="subtitle">Celebration of Holy Baptism</p>
+        </div>
 
-        <!-- ================================================================= -->
-        <!-- SECTION 1: COUNTDOWN TO BABY YOHANNE'S BAPTISM + HERO & PHOTOS    -->
-        <!-- ================================================================= -->
-        <section id="section-countdown-hero" class="royal-card rounded-[2.25rem] p-6 sm:p-10 text-center relative overflow-hidden">
-            <!-- Corner Pastel Ribbons & Stars -->
-            <div class="absolute top-3 left-4 text-2xl twinkle-light" aria-hidden="true">🌟</div>
-            <div class="absolute top-3 right-4 text-2xl twinkle-light" style="animation-delay: 0.6s;" aria-hidden="true">🌟</div>
+        <!-- Carousel Image Banner -->
+        <div class="carousel-banner">
+            <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=800&q=80" alt="Magic Carousel Theme">
+        </div>
 
-            <!-- COUNTDOWN BANNER (First thing seen right after opening!) -->
-            <div class="bg-gradient-to-r from-sky-card via-[#EFF8FF] to-pink-dusty/45 rounded-3xl p-5 sm:p-6 border-2 border-gold-antique/60 shadow-inner">
-                <p class="font-whimsy text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-sky-accent">
-                    ⏳ Save The Magical Date ⏳
-                </p>
-                <h2 class="font-serif-royal text-2xl sm:text-3xl font-bold text-navy-slate mt-1">
-                    Countdown to Baby Yohanne's Baptism
-                </h2>
-                <p id="display-event-date-subtitle" class="font-whimsy text-sm sm:text-base font-bold text-pink-deep mt-1">
-                    Sunday, November 29, 2026 • 5:30 AM
-                </p>
+        <div class="content">
+            <p>You are warmly invited to celebrate with us on the christening of our beloved child.</p>
 
-                <!-- 4-Box Animated Countdown Timer -->
-                <div class="grid grid-cols-4 gap-2.5 sm:gap-4 max-w-md mx-auto mt-4">
-                    <div class="bg-cream-base rounded-2xl p-3 border-2 border-gold-antique/50 shadow-sm">
-                        <div id="cd-days" class="font-serif-royal text-2xl sm:text-4xl font-bold text-sky-accent">00</div>
-                        <div class="font-whimsy text-[11px] sm:text-xs font-bold uppercase tracking-wider text-navy-slate/75 mt-0.5">Days</div>
-                    </div>
-                    <div class="bg-cream-base rounded-2xl p-3 border-2 border-gold-antique/50 shadow-sm">
-                        <div id="cd-hours" class="font-serif-royal text-2xl sm:text-4xl font-bold text-sky-accent">00</div>
-                        <div class="font-whimsy text-[11px] sm:text-xs font-bold uppercase tracking-wider text-navy-slate/75 mt-0.5">Hours</div>
-                    </div>
-                    <div class="bg-cream-base rounded-2xl p-3 border-2 border-gold-antique/50 shadow-sm">
-                        <div id="cd-mins" class="font-serif-royal text-2xl sm:text-4xl font-bold text-sky-accent">00</div>
-                        <div class="font-whimsy text-[11px] sm:text-xs font-bold uppercase tracking-wider text-navy-slate/75 mt-0.5">Mins</div>
-                    </div>
-                    <div class="bg-cream-base rounded-2xl p-3 border-2 border-gold-antique/50 shadow-sm">
-                        <div id="cd-secs" class="font-serif-royal text-2xl sm:text-4xl font-bold text-pink-deep">00</div>
-                        <div class="font-whimsy text-[11px] sm:text-xs font-bold uppercase tracking-wider text-navy-slate/75 mt-0.5">Secs</div>
-                    </div>
-                </div>
+            <!-- COUNTDOWN TIMER -->
+            <div class="countdown-box">
+                <h3>⏳ Countdown to Baby Yohanne's Baptism</h3>
+                <div id="countdown">Loading countdown...</div>
             </div>
 
-            <!-- ANIMATED MAGIC CAROUSEL SVG ILLUSTRATION -->
-            <div class="mt-7 flex justify-center">
-                <svg class="w-full max-w-sm h-auto drop-shadow-md" viewBox="0 0 360 230" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated Magic Carousel with pastel canopy, horses, and teddy bear">
-                    <!-- Soft Cloud Base -->
-                    <ellipse cx="180" cy="212" rx="145" ry="14" fill="#D6ECFF"/>
-                    <!-- Carousel Center Pillar -->
-                    <rect x="168" y="75" width="24" height="122" fill="#F3E5AB" stroke="#D4AF37" stroke-width="2"/>
-                    <line x1="174" y1="75" x2="174" y2="197" stroke="#D4AF37" stroke-width="1.5"/>
-                    <line x1="186" y1="75" x2="186" y2="197" stroke="#D4AF37" stroke-width="1.5"/>
-
-                    <!-- Left Carousel Pole & Galloping Horse -->
-                    <g class="horse-up">
-                        <line x1="102" y1="78" x2="102" y2="196" stroke="#D4AF37" stroke-width="3"/>
-                        <!-- Pastel White/Blue Carousel Horse -->
-                        <ellipse cx="102" cy="142" rx="22" ry="12" fill="#FFFFFF" stroke="#8ECAE6" stroke-width="2"/>
-                        <path d="M118 138L128 122L135 126L124 144Z" fill="#FFFFFF" stroke="#8ECAE6" stroke-width="2"/>
-                        <circle cx="130" cy="123" r="6" fill="#FFFFFF" stroke="#8ECAE6" stroke-width="2"/>
-                        <!-- Pastel Pink Saddle -->
-                        <path d="M93 132Q102 140 111 132Z" fill="#F5C2D1" stroke="#D4AF37" stroke-width="1.5"/>
-                        <!-- Horse Legs -->
-                        <line x1="87" y1="151" x2="80" y2="166" stroke="#8ECAE6" stroke-width="3" stroke-linecap="round"/>
-                        <line x1="115" y1="151" x2="124" y2="164" stroke="#8ECAE6" stroke-width="3" stroke-linecap="round"/>
-                    </g>
-
-                    <!-- Center Cute Teddy Rider -->
-                    <g class="horse-down">
-                        <circle cx="180" cy="126" r="14" fill="#C68B59" stroke="#FFFFFF" stroke-width="1.5"/>
-                        <circle cx="169" cy="115" r="5.5" fill="#C68B59"/>
-                        <circle cx="191" cy="115" r="5.5" fill="#C68B59"/>
-                        <circle cx="176" cy="124" r="1.8" fill="#24364B"/>
-                        <circle cx="184" cy="124" r="1.8" fill="#24364B"/>
-                        <ellipse cx="180" cy="129" rx="5" ry="3.8" fill="#F3D5B5"/>
-                        <circle cx="180" cy="128" r="1.8" fill="#5C3A21"/>
-                    </g>
-
-                    <!-- Right Carousel Pole & Galloping Horse -->
-                    <g class="horse-down">
-                        <line x1="258" y1="78" x2="258" y2="196" stroke="#D4AF37" stroke-width="3"/>
-                        <ellipse cx="258" cy="142" rx="22" ry="12" fill="#FFFDF7" stroke="#F5C2D1" stroke-width="2"/>
-                        <path d="M242 138L232 122L225 126L236 144Z" fill="#FFFDF7" stroke="#F5C2D1" stroke-width="2"/>
-                        <circle cx="230" cy="123" r="6" fill="#FFFDF7" stroke="#F5C2D1" stroke-width="2"/>
-                        <!-- Pastel Blue Saddle -->
-                        <path d="M249 132Q258 140 267 132Z" fill="#8ECAE6" stroke="#D4AF37" stroke-width="1.5"/>
-                        <line x1="244" y1="151" x2="236" y2="164" stroke="#F5C2D1" stroke-width="3" stroke-linecap="round"/>
-                        <line x1="271" y1="151" x2="278" y2="166" stroke="#F5C2D1" stroke-width="3" stroke-linecap="round"/>
-                    </g>
-
-                    <!-- Carousel Platform Base -->
-                    <rect x="64" y="194" width="232" height="14" rx="7" fill="url(#baseGrad)" stroke="#D4AF37" stroke-width="2"/>
-
-                    <!-- Carousel Scalloped Canopy Roof -->
-                    <path d="M55 76L180 22L305 76Z" fill="#D6ECFF" stroke="#D4AF37" stroke-width="2.5"/>
-                    <path d="M96 76L180 22L264 76Z" fill="#F5C2D1" fill-opacity="0.75"/>
-                    <path d="M138 76L180 22L222 76Z" fill="#FFFDF7"/>
-                    <!-- Scalloped Trim & Twinkling Fairy Lights -->
-                    <path d="M55 76Q75 90 96 76Q117 90 138 76Q159 90 180 76Q201 90 222 76Q243 90 264 76Q285 90 305 76" fill="#FFFDF7" stroke="#D4AF37" stroke-width="2"/>
-                    <circle cx="75" cy="82" r="4" fill="#F5D76E" class="twinkle-light"/>
-                    <circle cx="117" cy="82" r="4" fill="#F5D76E" class="twinkle-light" style="animation-delay:0.3s"/>
-                    <circle cx="159" cy="82" r="4" fill="#F5D76E" class="twinkle-light" style="animation-delay:0.6s"/>
-                    <circle cx="201" cy="82" r="4" fill="#F5D76E" class="twinkle-light" style="animation-delay:0.9s"/>
-                    <circle cx="243" cy="82" r="4" fill="#F5D76E" class="twinkle-light" style="animation-delay:1.2s"/>
-                    <circle cx="285" cy="82" r="4" fill="#F5D76E" class="twinkle-light" style="animation-delay:1.5s"/>
-
-                    <!-- Top Golden Spire & Star -->
-                    <line x1="180" y1="8" x2="180" y2="22" stroke="#D4AF37" stroke-width="3"/>
-                    <path d="M180 2L182.5 7.5L188.5 8L184 12L185.5 18L180 14.8L174.5 18L176 12L171.5 8L177.5 7.5L180 2Z" fill="#F5D76E" stroke="#B8860B" stroke-width="1"/>
-
-                    <defs>
-                        <linearGradient id="baseGrad" x1="64" y1="194" x2="296" y2="208" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="#D6ECFF"/>
-                            <stop offset="50%" stop-color="#FFFDF7"/>
-                            <stop offset="100%" stop-color="#F5C2D1"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
+            <!-- BACKGROUND MUSIC -->
+            <div class="music-player">
+                <p>🎵 Background Music</p>
+                <audio id="bg-music" controls loop style="width: 100%; margin-top: 5px;">
+                    <source src="https://www.bensound.com/bensound-music/bensound-tenderness.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
 
-            <!-- Royal Invitation Header -->
-            <p class="font-whimsy uppercase tracking-[0.22em] text-xs sm:text-sm text-sky-accent font-bold mt-2">
-                ✨ A Magical Blessing & Celebration ✨
-            </p>
-            <h2 class="font-script text-4xl sm:text-5xl gold-text-gradient mt-2">
-                The Holy Baptism of
-            </h2>
-            <h1 class="font-serif-royal text-4xl sm:text-6xl font-bold text-navy-slate tracking-tight mt-1">
-                Baby Yohanne Rei
-            </h1>
-
-            <!-- FEATURED CIRCULAR PORTRAIT OF BABY YOHANNE REI (Photo 3 - Cat Hat) -->
-            <div class="mt-6 flex justify-center">
-                <div class="relative inline-block">
-                    <span class="absolute -top-3 -left-3 text-3xl animate-teddy z-10" aria-hidden="true">🧸</span>
-                    <span class="absolute -top-3 -right-3 text-2xl twinkle-light z-10" aria-hidden="true">✨</span>
-                    <span class="absolute -bottom-2 -left-2 text-2xl twinkle-light z-10" style="animation-delay:0.5s" aria-hidden="true">💙</span>
-                    <span class="absolute -bottom-2 -right-2 text-2xl animate-bounce z-10" aria-hidden="true">🎠</span>
-
-                    <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-full p-2.5 bg-gradient-to-tr from-gold-antique via-sky-card to-pink-dusty shadow-xl">
-                        <div class="w-full h-full rounded-full overflow-hidden border-4 border-cream-base bg-sky-pastel">
-                            <img id="baby-photo-hero"
-                                 src="0be64b0d-d71b-4e40-b24e-f5a34dc33499.jpg"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/500x500/D6ECFF/24364B?text=Baby+Yohanne+Rei+%F0%9F%A7%B8';"
-                                 alt="Baby Yohanne Rei in cute knitted hat"
-                                 class="w-full h-full object-cover object-center">
-                        </div>
-                    </div>
-                </div>
+            <!-- CHURCH CEREMONY -->
+            <div class="details-box">
+                <h3>⛪ Church Ceremony</h3>
+                <p><strong>St. John Neumann Parish</strong></p>
+                <p>Sicayab, Dipolog City</p>
+                <p>⏰ Time: 5:30 AM</p>
             </div>
 
-            <!-- 3-PHOTO GALLERY SHOWCASE: ALL 3 UPLOADED PHOTOS OF BABY YOHANNE REI -->
-            <div class="mt-8">
-                <p class="font-whimsy text-xs sm:text-sm font-bold uppercase tracking-widest text-navy-slate/75 mb-4">
-                    🩵 Precious Moments of Our Little Prince Yohanne Rei 🩵
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 max-w-3xl mx-auto">
-                    <!-- Gallery Photo 1 -->
-                    <div class="group bg-gradient-to-b from-sky-card via-cream-base to-pink-dusty/35 p-2.5 rounded-3xl border-2 border-gold-antique/70 shadow-md hover:-translate-y-1 transition-transform">
-                        <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border-2 border-white bg-sky-pastel">
-                            <img id="baby-photo-1"
-                                 src="WhatsApp Image 2026-11-16 at 2.50.49 PM_2.jpeg"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/600x450/D6ECFF/24364B?text=Sweet+Smile+%F0%9F%A7%B8';"
-                                 alt="Baby Yohanne Rei smiling brightly"
-                                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <p class="mt-2 font-whimsy text-xs font-bold text-navy-slate">
-                            🧸 Sweetest Little Smile
-                        </p>
-                    </div>
-
-                    <!-- Gallery Photo 2 -->
-                    <div class="group bg-gradient-to-b from-pink-dusty/40 via-cream-base to-sky-card p-2.5 rounded-3xl border-2 border-gold-antique/70 shadow-md hover:-translate-y-1 transition-transform">
-                        <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border-2 border-white bg-sky-pastel">
-                            <img id="baby-photo-2"
-                                 src="WhatsApp Image 2026-11-11 at 8.17.11 AM_2.jpeg"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/600x450/F5C2D1/24364B?text=Teddy+Cuddles+%E2%9C%A8';"
-                                 alt="Baby Yohanne Rei cuddling his teddy pillow"
-                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <p class="mt-2 font-whimsy text-xs font-bold text-navy-slate">
-                            💙 Teddy Bear Cuddles
-                        </p>
-                    </div>
-
-                    <!-- Gallery Photo 3 -->
-                    <div class="group bg-gradient-to-b from-sky-card via-cream-base to-gold-light/45 p-2.5 rounded-3xl border-2 border-gold-antique/70 shadow-md hover:-translate-y-1 transition-transform">
-                        <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border-2 border-white bg-sky-pastel">
-                            <img id="baby-photo-3"
-                                 src="0be64b0d-d71b-4e40-b24e-f5a34dc33499.jpg"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/600x450/FFFDF7/24364B?text=Little+Prince+%F0%9F%91%91';"
-                                 alt="Baby Yohanne Rei cozy portrait"
-                                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <p class="mt-2 font-whimsy text-xs font-bold text-navy-slate">
-                            👑 Our Little Blessing
-                        </p>
-                    </div>
-                </div>
+            <!-- RECEPTION VENUE -->
+            <div class="details-box">
+                <h3>🏡 Reception Venue</h3>
+                <p><strong>Barnayja's Residence</strong></p>
+                <p>Blk 4 Lot 2, Rufina Heights, Dicayas, Dipolog City</p>
+                <p>🎉 To follow immediately after the ceremony.</p>
             </div>
 
-            <p class="mt-6 max-w-xl mx-auto text-navy-slate/90 text-sm sm:text-base leading-relaxed font-medium">
-                With joyful and grateful hearts, we invite you to witness and celebrate the sacred sacrament of Holy Baptism as our beloved son,
-                <strong class="text-sky-accent font-bold">Yohanne Rei</strong>, is welcomed into God's loving family.
-            </p>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- SECTION 2: BAPTISMAL DETAILS & ANIMATED VENUES (CHURCH & BAHAY)   -->
-        <!-- ================================================================= -->
-        <section id="section-venues" class="royal-card rounded-[2.25rem] p-6 sm:p-10">
-            <div class="text-center mb-7">
-                <span class="px-3.5 py-1 rounded-full bg-sky-card text-sky-accent font-whimsy font-bold text-xs uppercase tracking-widest">
-                    📍 When & Where
-                </span>
-                <h2 class="font-serif-royal text-3xl sm:text-4xl font-bold text-navy-slate mt-2">
-                    Ceremony & Reception Venues
-                </h2>
-                <p id="display-time-badge" class="inline-flex items-center gap-2 mt-2 px-4 py-1.5 rounded-full bg-gold-light/60 border border-gold-antique text-navy-slate font-whimsy font-bold text-sm">
-                    ⏰ Ceremony Time: <span class="text-sky-accent">5:30 AM</span>
-                </p>
+            <!-- ATTIRE GUIDE -->
+            <div class="attire-section">
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-color);">👗 Attire Guide</h3>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">Soft pastel & elegant colors</p>
+                <div class="attire-icons">
+                    <span>👗</span>
+                    <span>👔</span>
+                    <span>👖</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #555; margin-top: 8px;">Ladies: Dress or Formal Wear<br>Gents: Polo, T-shirt or Pants</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- CHURCH VENUE CARD: St. John Neumann Parish -->
-                <div class="bg-gradient-to-b from-[#EFF8FF] to-cream-base rounded-3xl p-6 border-2 border-sky-accent/35 shadow-md flex flex-col items-center text-center justify-between">
-                    <div class="w-full">
-                        <span class="inline-block px-3 py-1 rounded-full bg-sky-accent text-white font-whimsy font-bold text-xs uppercase tracking-wider">
-                            ⛪ Holy Baptism Ceremony
-                        </span>
-
-                        <!-- ANIMATED CARTOON CHURCH SVG -->
-                        <div class="my-4 flex justify-center">
-                            <svg class="w-44 h-40 drop-shadow" viewBox="0 0 220 190" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated St. John Neumann Church">
-                                <!-- Twinkling Blessings & Floating Hearts Above Church -->
-                                <text x="34" y="42" font-size="14" class="twinkle-light">✨</text>
-                                <text x="172" y="38" font-size="14" class="twinkle-light" style="animation-delay:0.5s">✨</text>
-                                <text x="103" y="18" font-size="13" class="animate-rise">💙</text>
-
-                                <!-- Soft Ground & Bushes -->
-                                <ellipse cx="110" cy="176" rx="92" ry="10" fill="#D6ECFF"/>
-                                <circle cx="42" cy="166" r="14" fill="#A8E6CF"/>
-                                <circle cx="178" cy="166" r="14" fill="#A8E6CF"/>
-
-                                <!-- Side Wings of Church -->
-                                <rect x="44" y="106" width="132" height="68" rx="6" fill="#FFFDF7" stroke="#D4AF37" stroke-width="2"/>
-                                <polygon points="38,108 110,74 182,108" fill="#8ECAE6" stroke="#4A90E2" stroke-width="2"/>
-
-                                <!-- Center Bell Tower -->
-                                <rect x="82" y="58" width="56" height="116" fill="#FFFDF7" stroke="#D4AF37" stroke-width="2.2"/>
-                                <polygon points="76,60 110,24 144,60" fill="#4A90E2" stroke="#24364B" stroke-width="1.8"/>
-
-                                <!-- Golden Cross on Top -->
-                                <rect x="107.5" y="6" width="5" height="20" rx="2" fill="#D4AF37"/>
-                                <rect x="102" y="11" width="16" height="4.5" rx="2" fill="#D4AF37"/>
-
-                                <!-- Swinging Bell in Belfry -->
-                                <rect x="98" y="68" width="24" height="24" rx="12" fill="#24364B"/>
-                                <path d="M104 86Q110 74 116 86H104Z" fill="#F5D76E" class="animate-teddy"/>
-
-                                <!-- Stained Glass Rose Window -->
-                                <circle cx="110" cy="108" r="12" fill="#F5C2D1" stroke="#D4AF37" stroke-width="2"/>
-                                <line x1="110" y1="96" x2="110" y2="120" stroke="#FFFDF7" stroke-width="1.5"/>
-                                <line x1="98" y1="108" x2="122" y2="108" stroke="#FFFDF7" stroke-width="1.5"/>
-
-                                <!-- Arched Wooden Church Doors -->
-                                <path d="M95 174V144C95 135.7 101.7 129 110 129C118.3 129 125 135.7 125 144V174H95Z" fill="#C68B59" stroke="#D4AF37" stroke-width="2"/>
-                                <line x1="110" y1="129" x2="110" y2="174" stroke="#5C3A21" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-
-                        <h3 id="display-church-name" class="font-serif-royal text-2xl font-bold text-navy-slate">
-                            St. John Neumann Parish
-                        </h3>
-                        <p id="display-church-address" class="font-whimsy text-sm sm:text-base font-semibold text-navy-slate/80 mt-1">
-                            Sicayab, Dipolog City
-                        </p>
-                        <p class="text-xs font-bold text-sky-accent mt-1">
-                            5:30 AM • Morning Baptismal Rites
-                        </p>
-                    </div>
-
-                    <!-- Location Pin Button Below Church -->
-                    <a id="church-map-link"
-                       href="https://www.google.com/maps/search/?api=1&query=St+John+Neumann+Parish+Sicayab+Dipolog+City"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-sky-accent text-white font-whimsy font-bold text-xs sm:text-sm shadow-md hover:bg-navy-slate transition">
-                        <!-- Location Pin SVG Icon -->
-                        <svg class="w-4 h-4 animate-bounce" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                        <span>View Church Location</span>
-                    </a>
-                </div>
-
-                <!-- RECEPTION VENUE CARD: Barnayja's Residence (Animated Bahay) -->
-                <div class="bg-gradient-to-b from-[#FFF3F7] to-cream-base rounded-3xl p-6 border-2 border-pink-deep/35 shadow-md flex flex-col items-center text-center justify-between">
-                    <div class="w-full">
-                        <span class="inline-block px-3 py-1 rounded-full bg-pink-deep text-white font-whimsy font-bold text-xs uppercase tracking-wider">
-                            🏡 Reception Celebration
-                        </span>
-
-                        <!-- ANIMATED CARTOON BAHAY / HOUSE SVG -->
-                        <div class="my-4 flex justify-center">
-                            <svg class="w-44 h-40 drop-shadow" viewBox="0 0 220 190" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated Barnayja's Residence Bahay">
-                                <!-- Floating Love Hearts Coming From Chimney -->
-                                <text x="148" y="42" font-size="14" class="animate-rise">💗</text>
-                                <text x="158" y="28" font-size="12" class="animate-rise" style="animation-delay:0.9s">💙</text>
-                                <text x="32" y="45" font-size="14" class="twinkle-light">✨</text>
-
-                                <!-- Soft Lawn & Flowers -->
-                                <ellipse cx="110" cy="176" rx="92" ry="10" fill="#F5C2D1" fill-opacity="0.55"/>
-                                <circle cx="44" cy="168" r="11" fill="#A8E6CF"/>
-                                <circle cx="52" cy="164" r="3" fill="#E07A9A"/>
-                                <circle cx="176" cy="168" r="11" fill="#A8E6CF"/>
-                                <circle cx="168" cy="164" r="3" fill="#4A90E2"/>
-
-                                <!-- Chimney -->
-                                <rect x="142" y="46" width="18" height="36" rx="3" fill="#F5C2D1" stroke="#D4AF37" stroke-width="2"/>
-
-                                <!-- Main Cozy House Walls -->
-                                <rect x="52" y="96" width="116" height="78" rx="8" fill="#FFFDF7" stroke="#D4AF37" stroke-width="2.2"/>
-
-                                <!-- Pastel Pink & Gold Roof -->
-                                <polygon points="38,100 110,44 182,100" fill="#E07A9A" stroke="#D4AF37" stroke-width="2.2" stroke-linejoin="round"/>
-                                <!-- Attic Heart Window -->
-                                <circle cx="110" cy="78" r="10" fill="#D6ECFF" stroke="#FFFDF7" stroke-width="2"/>
-
-                                <!-- Left & Right Cozy Windows with Shutters -->
-                                <rect x="64" y="114" width="24" height="24" rx="4" fill="#D6ECFF" stroke="#4A90E2" stroke-width="2"/>
-                                <line x1="76" y1="114" x2="76" y2="138" stroke="#4A90E2" stroke-width="1.5"/>
-                                <line x1="64" y1="126" x2="88" y2="126" stroke="#4A90E2" stroke-width="1.5"/>
-
-                                <rect x="132" y="114" width="24" height="24" rx="4" fill="#D6ECFF" stroke="#4A90E2" stroke-width="2"/>
-                                <line x1="144" y1="114" x2="144" y2="138" stroke="#4A90E2" stroke-width="1.5"/>
-                                <line x1="132" y1="126" x2="156" y2="126" stroke="#4A90E2" stroke-width="1.5"/>
-
-                                <!-- Front Welcome Door -->
-                                <rect x="97" y="128" width="26" height="46" rx="13" fill="#8ECAE6" stroke="#D4AF37" stroke-width="2"/>
-                                <circle cx="117" cy="153" r="2.5" fill="#D4AF37"/>
-
-                                <!-- White Picket Fence -->
-                                <rect x="28" y="156" width="22" height="18" rx="2" fill="#FFFDF7" stroke="#D4AF37" stroke-width="1.2"/>
-                                <rect x="170" y="156" width="22" height="18" rx="2" fill="#FFFDF7" stroke="#D4AF37" stroke-width="1.2"/>
-                            </svg>
-                        </div>
-
-                        <h3 id="display-reception-name" class="font-serif-royal text-2xl font-bold text-navy-slate">
-                            Barnayja's Residence
-                        </h3>
-                        <p id="display-reception-address" class="font-whimsy text-sm sm:text-base font-semibold text-navy-slate/80 mt-1">
-                            Blk 4 Lot 2, Rufina Heights, Dicayas, Dipolog City
-                        </p>
-                        <p class="text-xs font-bold text-pink-deep mt-1">
-                            Following the Baptismal Ceremony
-                        </p>
-                    </div>
-
-                    <!-- Location Pin Button Below Bahay -->
-                    <a id="reception-map-link"
-                       href="https://www.google.com/maps/search/?api=1&query=Rufina+Heights+Dicayas+Dipolog+City"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-pink-deep text-white font-whimsy font-bold text-xs sm:text-sm shadow-md hover:bg-navy-slate transition">
-                        <svg class="w-4 h-4 animate-bounce" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                        <span>View Reception Location</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- SECTION 3: ATTIRE GUIDE (DRESS, T-SHIRT / POLO & PANTS)           -->
-        <!-- ================================================================= -->
-        <section id="section-attire" class="royal-card rounded-[2.25rem] p-6 sm:p-10 text-center">
-            <span class="px-4 py-1 rounded-full bg-gold-light/75 border border-gold-antique text-navy-slate font-whimsy font-bold text-xs uppercase tracking-widest">
-                👗 What To Wear 👔
-            </span>
-            <h2 class="font-serif-royal text-3xl sm:text-4xl font-bold text-navy-slate mt-2">
-                Attire Guide
-            </h2>
-            <p class="font-whimsy text-sm sm:text-base text-navy-slate/80 max-w-lg mx-auto mt-1.5">
-                We would love to see you in <strong class="text-sky-accent">Smart Casual</strong> or <strong class="text-pink-deep">Pastel Shades</strong> to match Baby Yohanne Rei's Magic Carousel celebration!
-            </p>
-
-            <!-- Custom Cartoon Outfit Icons: Dress, T-Shirt / Polo, Pants -->
-            <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-xl mx-auto mt-6">
-                <!-- Cartoon Pastel Dress -->
-                <div class="bg-gradient-to-b from-[#FFF3F7] to-cream-base rounded-3xl p-4 border-2 border-pink-dusty shadow-sm flex flex-col items-center hover:scale-105 transition-transform">
-                    <svg class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 100 100" fill="none">
-                        <path d="M36 22L43 32H57L64 22L72 28L63 44L76 82H24L37 44L28 28L36 22Z" fill="#F5C2D1" stroke="#E07A9A" stroke-width="2.5" stroke-linejoin="round"/>
-                        <path d="M37 44H63" stroke="#D4AF37" stroke-width="2.5"/>
-                        <circle cx="50" cy="44" r="3.5" fill="#D4AF37"/>
-                    </svg>
-                    <span class="font-whimsy font-bold text-xs sm:text-sm text-navy-slate mt-2">Pastel Dress</span>
-                </div>
-
-                <!-- Cartoon Polo / T-Shirt -->
-                <div class="bg-gradient-to-b from-[#EFF8FF] to-cream-base rounded-3xl p-4 border-2 border-sky-card shadow-sm flex flex-col items-center hover:scale-105 transition-transform">
-                    <svg class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 100 100" fill="none">
-                        <path d="M34 24L50 32L66 24L84 36L75 50L66 44V80H34V44L25 50L16 36L34 24Z" fill="#8ECAE6" stroke="#4A90E2" stroke-width="2.5" stroke-linejoin="round"/>
-                        <!-- Collar & Buttons -->
-                        <path d="M38 25L50 37L62 25" stroke="#FFFDF7" stroke-width="2.5" stroke-linecap="round"/>
-                        <circle cx="50" cy="44" r="2" fill="#FFFDF7"/>
-                        <circle cx="50" cy="52" r="2" fill="#FFFDF7"/>
-                    </svg>
-                    <span class="font-whimsy font-bold text-xs sm:text-sm text-navy-slate mt-2">Polo / T-Shirt</span>
-                </div>
-
-                <!-- Cartoon Slacks / Pants -->
-                <div class="bg-gradient-to-b from-[#FFFDF2] to-cream-base rounded-3xl p-4 border-2 border-gold-antique/50 shadow-sm flex flex-col items-center hover:scale-105 transition-transform">
-                    <svg class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 100 100" fill="none">
-                        <path d="M32 22H68L72 82H55L50 48L45 82H28L32 22Z" fill="#E6D5B8" stroke="#B8860B" stroke-width="2.5" stroke-linejoin="round"/>
-                        <line x1="32" y1="30" x2="68" y2="30" stroke="#B8860B" stroke-width="2"/>
-                        <rect x="47" y="24" width="6" height="6" rx="1" fill="#D4AF37"/>
-                    </svg>
-                    <span class="font-whimsy font-bold text-xs sm:text-sm text-navy-slate mt-2">Pants / Slacks</span>
-                </div>
-            </div>
-
-            <!-- Pastel Motif Color Swatches -->
-            <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-whimsy font-bold">
-                    <span class="w-4 h-4 rounded-full bg-[#8ECAE6] border border-black/10"></span> Powder Blue
-                </span>
-                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-whimsy font-bold">
-                    <span class="w-4 h-4 rounded-full bg-[#FFF8E7] border border-black/10"></span> Warm Cream
-                </span>
-                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-whimsy font-bold">
-                    <span class="w-4 h-4 rounded-full bg-[#F5C2D1] border border-black/10"></span> Pastel Pink
-                </span>
-                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-whimsy font-bold">
-                    <span class="w-4 h-4 rounded-full bg-[#F3E5AB] border border-black/10"></span> Soft Gold
-                </span>
-            </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- SECTION 4: GODPARENTS (NINONGS & NINANGS)                         -->
-        <!-- ================================================================= -->
-        <section id="section-godparents" class="royal-card rounded-[2.25rem] p-6 sm:p-10">
-            <div class="text-center mb-8">
-                <span class="px-4 py-1 rounded-full bg-sky-card text-sky-accent font-whimsy font-bold text-xs uppercase tracking-widest">
-                    ✨ Pillars of Faith & Love ✨
-                </span>
-                <h2 class="font-serif-royal text-3xl sm:text-4xl font-bold text-navy-slate mt-2">
-                    Ninongs & Ninangs
-                </h2>
-                <p class="font-whimsy text-sm text-navy-slate/75 mt-1">
-                    Chosen with love to guide Baby Yohanne Rei throughout his life
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                <!-- NINONGS LIST -->
-                <div class="bg-gradient-to-b from-[#EBF6FF] to-cream-base rounded-3xl p-6 border-2 border-sky-accent/40 shadow-sm">
-                    <div class="flex items-center justify-center gap-2 pb-3 mb-4 border-b border-sky-accent/25">
-                        <span class="text-2xl">💙</span>
-                        <h3 class="font-serif-royal text-2xl font-bold text-sky-accent">Ninongs</h3>
-                    </div>
-                    <ol id="ninongs-list" class="space-y-2.5 font-whimsy font-bold text-navy-slate text-sm sm:text-base">
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">1</span> Michael Dave Jaugin</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">2</span> Brian Dave Bayron</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">3</span> Merlin John Gicoso</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">4</span> McCartey Vidal</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">5</span> JV Gallemit</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">6</span> Fred John Caidic</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">7</span> Jie Duhanglungsod</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">8</span> Russel Dalaguan</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">9</span> Joffe Baguinat</li>
-                        <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-sky-card"><span class="w-6 h-6 rounded-full bg-sky-accent text-white text-xs flex items-center justify-center shrink-0">10</span> Jacob Delegencia</li>
-                    </ol>
-                </div>
-
-                <!-- NINANGS LIST -->
-                <div class="bg-gradient-to-b from-[#FFF1F6] to-cream-base rounded-3xl p-6 border-2 border-pink-deep/40 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-center gap-2 pb-3 mb-4 border-b border-pink-deep/25">
-                            <span class="text-2xl">💗</span>
-                            <h3 class="font-serif-royal text-2xl font-bold text-pink-deep">Ninangs</h3>
-                        </div>
-                        <ol id="ninangs-list" class="space-y-2.5 font-whimsy font-bold text-navy-slate text-sm sm:text-base">
-                            <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-pink-dusty"><span class="w-6 h-6 rounded-full bg-pink-deep text-white text-xs flex items-center justify-center shrink-0">1</span> Jovy Lariba</li>
-                            <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-pink-dusty"><span class="w-6 h-6 rounded-full bg-pink-deep text-white text-xs flex items-center justify-center shrink-0">2</span> Elisa May Abrea</li>
-                            <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-pink-dusty"><span class="w-6 h-6 rounded-full bg-pink-deep text-white text-xs flex items-center justify-center shrink-0">3</span> Reahlyn Labadlabad</li>
-                            <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-pink-dusty"><span class="w-6 h-6 rounded-full bg-pink-deep text-white text-xs flex items-center justify-center shrink-0">4</span> Andrea Ompoy</li>
-                            <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-pink-dusty"><span class="w-6 h-6 rounded-full bg-pink-deep text-white text-xs flex items-center justify-center shrink-0">5</span> Adela Mongcopa</li>
-                            <li class="flex items-center gap-3 bg-white/80 px-3.5 py-2 rounded-xl border border-pink-dusty"><span class="w-6 h-6 rounded-full bg-pink-deep text-white text-xs flex items-center justify-center shrink-0">6</span> Ruby Gail Romualdo</li>
+            <!-- GODPARENTS LIST -->
+            <div class="godparents-section">
+                <h3>✨ Our Dear Godparents ✨</h3>
+                <div class="gp-list">
+                    <div class="gp-col">
+                        <h4>💙 Ninongs</h4>
+                        <ol>
+                            <li>Michael Dave Jaugin</li>
+                            <li>Brian Dave Bayron</li>
+                            <li>Merlin John Gicoso</li>
+                            <li>McCartey Vidal</li>
+                            <li>JV Gallemit</li>
+                            <li>Fred John Caidic</li>
+                            <li>Jie Duhanglungsod</li>
+                            <li>Russel Dalaguan</li>
+                            <li>Joffe Baguinat</li>
+                            <li>Jacob Delegencia</li>
                         </ol>
                     </div>
-
-                    <!-- Sweet Decorative Teddy & Carousel Emblem Below Ninangs -->
-                    <div class="mt-6 p-4 rounded-2xl bg-pink-dusty/30 border border-pink-deep/25 text-center">
-                        <div class="text-3xl animate-teddy">🧸🎠💙</div>
-                        <p class="font-whimsy text-xs font-bold text-navy-slate/80 mt-1">
-                            Thank you for standing beside Baby Yohanne Rei on his special day!
-                        </p>
+                    <div class="gp-col">
+                        <h4>💗 Ninangs</h4>
+                        <ol>
+                            <li>Jovy Lariba</li>
+                            <li>Elisa May Abrea</li>
+                            <li>Reahlyn Labadlabad</li>
+                            <li>Andrea Ompoy</li>
+                            <li>Adela Mongcopa</li>
+                            <li>Ruby Gail Romualdo</li>
+                        </ol>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- ================================================================= -->
-        <!-- SECTION 5: DEDICATED SECTION 1 - TO OUR DEAR NINONGS AND NINANGS  -->
-        <!-- ================================================================= -->
-        <section id="section-ninong-message-1" class="relative rounded-[2.25rem] p-7 sm:p-10 bg-gradient-to-br from-[#D6ECFF] via-[#EAF6FF] to-[#FFFDF7] border-2 border-sky-accent/50 shadow-xl text-center overflow-hidden">
-            <!-- Floating Hearts & Animated Teddy Bear -->
-            <span class="absolute top-4 left-5 text-2xl animate-bounce" aria-hidden="true">💙</span>
-            <span class="absolute top-4 right-5 text-2xl animate-bounce" style="animation-delay:0.4s" aria-hidden="true">🩵</span>
-            <span class="absolute bottom-4 left-6 text-xl twinkle-light" aria-hidden="true">✨</span>
-            <span class="absolute bottom-4 right-6 text-xl twinkle-light" style="animation-delay:0.7s" aria-hidden="true">💙</span>
-
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/90 border-2 border-gold-antique shadow-md text-3xl animate-teddy mb-3">
-                🧸
-            </div>
-
-            <h2 class="font-serif-royal text-2xl sm:text-4xl font-bold text-navy-slate">
-                To Our Dear Ninongs and Ninangs
-            </h2>
-
-            <blockquote class="mt-4 max-w-2xl mx-auto font-whimsy text-base sm:text-lg font-semibold text-navy-slate/90 leading-relaxed italic bg-white/75 p-5 sm:p-6 rounded-3xl border border-sky-accent/30 shadow-inner">
+            <!-- SWEET MESSAGE 1 -->
+            <div class="message-box">
                 "Thank you for accepting the special role of becoming Yohanne Rei's godparents. Your presence in his life will be a blessing, and we hope you'll guide him with love, faith, wisdom, and prayers as he grows. We are truly grateful to have you as part of his journey."
-            </blockquote>
-
-            <p class="mt-5 font-serif-royal text-lg sm:text-xl font-bold text-sky-accent">
-                With love and gratitude,<br>
-                <span class="text-navy-slate">Yohanne Rei &amp; Family 🧸💙</span>
-            </p>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- SECTION 6: DEDICATED SECTION 2 - HEARTFELT PERSONAL NOTE          -->
-        <!-- ================================================================= -->
-        <section id="section-ninong-message-2" class="royal-card rounded-[2.25rem] p-7 sm:p-10 text-center relative overflow-hidden">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-pink-dusty text-navy-slate font-whimsy font-bold text-xs uppercase tracking-widest border border-gold-antique/50">
-                💌 A Heartfelt Note For You 💌
+                <strong>With love and gratitude,<br>Yohanne Rei & Family 🧸💙</strong>
             </div>
 
-            <h3 class="font-script text-4xl sm:text-5xl gold-text-gradient mt-3">
-                Dear Ninongs and Ninangs,
-            </h3>
-
-            <div class="mt-4 max-w-2xl mx-auto space-y-4 font-whimsy text-base sm:text-lg font-semibold text-navy-slate/90 leading-relaxed">
-                <p>
-                    Thank you for being part of Baby Yohanne Rei's special day! We are so blessed to have you as his godparents. May you always guide him with love, patience, faith, and prayers as he grows.
-                </p>
-                <p class="text-sky-accent font-bold">
-                    We are excited to have you be part of his journey!
-                </p>
+            <!-- SWEET MESSAGE 2 -->
+            <div class="message-box" style="background: linear-gradient(135deg, #e1f5fe 100%, #fff9c4 0%);">
+                "Thank you for being part of Baby Yohanne Rei's special day! We are so blessed to have you as his godparents. May you always guide him with love, patience, faith, and prayers as he grows. We are excited to have you be part of his journey!"
+                <strong>With love,<br>Baby Yohanne Rei & Family 🧸💙</strong>
             </div>
 
-            <div class="mt-5 inline-block px-6 py-3 rounded-2xl bg-sky-pastel/80 border border-sky-accent/30">
-                <p class="font-serif-royal text-base sm:text-lg font-bold text-navy-slate">
-                    With love,<br>
-                    <span class="text-sky-accent">Baby Yohanne Rei &amp; Family 🧸💙</span>
-                </p>
-            </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- SECTION 7: BABY YOHANNE REI'S GIFT GUIDE                          -->
-        <!-- ================================================================= -->
-        <section id="section-gift-guide" class="royal-card rounded-[2.25rem] p-6 sm:p-10 relative overflow-hidden">
-            <!-- Twinkling Stars Top Corners -->
-            <span class="absolute top-4 left-5 text-2xl twinkle-light" aria-hidden="true">⭐</span>
-            <span class="absolute top-4 right-5 text-2xl twinkle-light" style="animation-delay:0.5s" aria-hidden="true">⭐</span>
-
-            <div class="text-center max-w-2xl mx-auto">
-                <span class="px-4 py-1 rounded-full bg-gold-light/80 border border-gold-antique text-navy-slate font-whimsy font-bold text-xs uppercase tracking-widest">
-                    🎁 Little Wishes & Essentials 🎁
-                </span>
-                <h2 class="font-serif-royal text-3xl sm:text-4xl font-bold text-navy-slate mt-2">
-                    Baby Yohanne Rei's Gift Guide
-                </h2>
-                <p class="font-whimsy text-sm sm:text-base font-semibold text-navy-slate/85 mt-2">
-                    Your presence is already the greatest gift. But if you wish to give something for our little one, here are some ideas!
-                </p>
+            <!-- GIFT GUIDE -->
+            <div class="gift-guide">
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-color); margin-bottom: 8px;">🎁 Baby Yohanne Rei's Gift Guide</h3>
+                <p style="font-size: 0.9rem; color: #555;">Your presence is already the greatest gift. But if you wish to give something for our little one, here are some ideas!</p>
+                <table class="gift-table">
+                    <tr>
+                        <th>Logo</th>
+                        <th>Gift Option</th>
+                    </tr>
+                    <tr><td>🍼</td><td>Milk (Bonna)</td></tr>
+                    <tr><td>🧷</td><td>Diapers</td></tr>
+                    <tr><td>🧴</td><td>Baby toiletries</td></tr>
+                    <tr><td>👕</td><td>Baby clothes</td></tr>
+                    <tr><td>🧸</td><td>Stuffed toys</td></tr>
+                    <tr><td>🛏️</td><td>Baby blankets</td></tr>
+                    <tr><td>🛒</td><td>Baby essentials</td></tr>
+                    <tr><td>✉️</td><td>Monetary Gift</td></tr>
+                </table>
             </div>
 
-            <!-- ANIMATED CENTERPIECE: TEDDY BEAR RIDING A BOAT + BOUNCING HEART ENVELOPE -->
-            <div class="my-6 flex flex-wrap items-center justify-center gap-6 sm:gap-12">
-                <!-- Teddy Bear Riding a Little Boat SVG -->
-                <div class="flex flex-col items-center">
-                    <svg class="w-44 h-32 drop-shadow-sm" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Teddy bear riding a little pastel boat">
-                        <!-- Floating Hearts -->
-                        <text x="34" y="34" font-size="14" class="animate-rise">💙</text>
-                        <text x="150" y="30" font-size="14" class="animate-rise" style="animation-delay:0.8s">💗</text>
-
-                        <!-- Rocking Boat & Teddy Group -->
-                        <g class="animate-boat">
-                            <!-- Cute Teddy Bear Sitting in Boat -->
-                            <circle cx="88" cy="46" r="10" fill="#C68B59"/>
-                            <circle cx="112" cy="46" r="10" fill="#C68B59"/>
-                            <circle cx="100" cy="58" r="19" fill="#C68B59"/>
-                            <ellipse cx="100" cy="63" rx="9" ry="7" fill="#F3D5B5"/>
-                            <circle cx="93" cy="55" r="2.2" fill="#24364B"/>
-                            <circle cx="107" cy="55" r="2.2" fill="#24364B"/>
-                            <ellipse cx="100" cy="61" rx="3" ry="2" fill="#5C3A21"/>
-                            <!-- Little Sailor Hat -->
-                            <path d="M89 41H111L107 33H93L89 41Z" fill="#FFFDF7" stroke="#4A90E2" stroke-width="1.5"/>
-
-                            <!-- Pastel Boat Hull -->
-                            <path d="M44 76H156L138 106H62L44 76Z" fill="#8ECAE6" stroke="#D4AF37" stroke-width="2.5" stroke-linejoin="round"/>
-                            <path d="M52 86H148" stroke="#FFFDF7" stroke-width="3" stroke-linecap="round"/>
-                            <!-- Little Heart on Boat -->
-                            <text x="93" y="100" font-size="12">💛</text>
-                        </g>
-
-                        <!-- Gentle Blue Waves -->
-                        <path d="M25 112Q45 104 65 112T105 112T145 112T180 112" stroke="#4A90E2" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <path d="M35 122Q55 115 75 122T115 122T155 122" stroke="#8ECAE6" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                    </svg>
-                    <span class="font-whimsy text-xs font-bold text-sky-accent">Sailing with Love 🧸⛵</span>
-                </div>
-
-                <!-- Envelope With a Bouncing Heart SVG -->
-                <div class="flex flex-col items-center">
-                    <svg class="w-40 h-32 drop-shadow-sm" viewBox="0 0 180 140" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Envelope with a bouncing heart">
-                        <text x="22" y="36" font-size="13" class="twinkle-light">✨</text>
-                        <text x="144" y="36" font-size="13" class="twinkle-light" style="animation-delay:0.4s">✨</text>
-
-                        <!-- Open Back Flap -->
-                        <polygon points="34,58 90,22 146,58" fill="#F3E5AB" stroke="#D4AF37" stroke-width="2"/>
-
-                        <!-- Bouncing Heart Emerging From Envelope -->
-                        <g class="animate-heart-bounce">
-                            <path d="M90 66C90 66 70 52 70 39C70 32 75.5 27 82 27C86 27 89 29 90 32C91 29 94 27 98 27C104.5 27 110 32 110 39C110 52 90 66 90 66Z" fill="#E07A9A" stroke="#FFFDF7" stroke-width="2"/>
-                        </g>
-
-                        <!-- Envelope Front Pocket -->
-                        <rect x="34" y="58" width="112" height="62" rx="8" fill="#FFFDF7" stroke="#D4AF37" stroke-width="2.2"/>
-                        <polyline points="34,58 90,94 146,58" fill="none" stroke="#D4AF37" stroke-width="2"/>
-                    </svg>
-                    <span class="font-whimsy text-xs font-bold text-pink-deep">Blessings &amp; Love 💌</span>
-                </div>
-            </div>
-
-            <!-- 8 CLICKABLE INTERACTIVE GIFT CARDS -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4 mt-4">
-                <!-- 1. Milk (Bonna) -->
-                <button type="button" onclick="selectGiftCard(this, 'Milk (Bonna)')"
-                        class="gift-card group relative bg-gradient-to-b from-[#EFF8FF] to-cream-base rounded-3xl p-4 border-2 border-sky-card hover:border-gold-antique shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex flex-col items-center text-center cursor-pointer">
-                    <span class="absolute top-2 right-2.5 text-xs opacity-70 group-hover:scale-125 transition-transform">💙</span>
-                    <span class="text-4xl sm:text-5xl mb-2 group-hover:animate-bounce">🍼</span>
-                    <span class="font-whimsy font-bold text-sm sm:text-base text-navy-slate">Milk (Bonna)</span>
-                    <span class="gift-badge mt-1.5 text-[11px] font-whimsy font-bold text-sky-accent">Tap to pick ✨</span>
-                </button>
-
-                <!-- 2. Diapers -->
-                <button type="button" onclick="selectGiftCard(this, 'Diapers')"
-                        class="gift-card group relative bg-gradient-to-b from-[#FFF3F7] to-cream-base rounded-3xl p-4 border-2 border-pink-dusty hover:border-gold-antique shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex flex-col items-center text-center cursor-pointer">
-                    <span class="absolute top-2 right-2.5 text-xs opacity-70 group-hover:scale-125 transition-transform">💗</span>
-                    <span class="text-4xl sm:text-5xl mb-2 group-hover:animate-bounce">🧷</span>
-                    <span class="font-whimsy font-bold text-sm sm:text-base text-navy-slate">Diapers</span>
-                    <span class="gift-badge mt-1.5 text-[11px] font-whimsy font-bold text-pink-deep">Tap to pick ✨</span>
-                </button>
-
-                <!-- 3. Baby toiletries -->
-                <button type="button" onclick="selectGiftCard(this, 'Baby toiletries')"
-                        class="gift-card group relative bg-gradient-to-b from-[#EFF8FF] to-cream-base rounded-3xl p-4 border-2 border-sky-card hover:border-gold-antique shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex flex-col items-center text-center cursor-pointer">
-                    <span class="absolute top-2 right-2.5 text-xs opacity-70 group-hover:scale-125 transition-transform">💙</span>
-                    <span class="text-4xl sm:text-5xl mb-2 group-hover:animate-bounce">🧴</span>
-                    <span class="font-whimsy font-bold text-sm sm:text-base text-navy-slate">Baby toiletries</span>
-                    <span class="gift-badge mt-1.5 text-[11px] font-whimsy font-bold text-sky-accent">Tap to pick ✨</span>
-                </button>
-
-                <!-- 4. Baby clothes -->
-                <button type="button" onclick="selectGiftCard(this, 'Baby clothes')"
-                        class="gift-card group relative bg-gradient-to-b from-[#FFF3F7] to-cream-base rounded-3xl p-4 border-2 border-pink-dusty hover:border-gold-antique shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex flex-col items-center text-center cursor-pointer">
-                    <span class="absolute top-2 right-2.5 text-xs opacity-70 group-hover:scale-125 transition-transform">💗</span>
-                    <span class="text-4xl sm:text-5xl mb-2 group-hover:animate-bounce">👕</span>
-                    <span class="font-whimsy font-bold text-sm sm:text-base text-navy-slate">Baby clothes</span>
-                    <span class="gift-badge mt-1.5 text-[11px] font-whimsy font-bold text-pink-deep">Tap to pick ✨</span>
-                </button>
-
-                <!-- 5. Stuffed toys -->
-                <button type="button" onclick="selectGiftCard(this, 'Stuffed toys')"
-                        class="gift-card group relative bg-gradient-to-b from-[#FFFDF2] to-cream-base rounded-3xl p-4 border-2 border-gold-antique/50 hover:border-gold-antique shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex flex-col items-center text-center cursor-pointer">
-                    <span class="absolute top-2 right-2.5 text-xs opacity-70 group-hover:scale-125 transition-transform">💛</span>
-                    <span class="text-4xl sm:text-5xl mb-2 group-hover:animate-bounce">🧸</span>
-                    <span class="font-whimsy font-bold text-sm sm:text-base text-navy-slate">Stuffed toys</span>
-                    <span class="gift-badge mt-1.5 text-[11px] font-whimsy font-bold text-amber-700">Tap to pick ✨</span>
-                </button>
-
-                <!-- 6. Baby blankets -->
-                <button type="button" onclick="selectGiftCard(this, 'Baby blankets')"
-                        class="gift-card group relative bg-gradient-to-b from-[#EFF8FF] to-cream-base rounded-3xl p-4 border-2 border-sky-card hover:border-gold-antique shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex flex-col items-center text-center cursor-pointer">
-                    <span class="absolute top-2 right-2.5 text-xs opacity-70 group-hover:scale-125 transition-transform">💙</span>
-                    <span class="text-4xl sm:text-5xl mb-2 group-hover:animate-bounce">🛏️</span>
-                    <span class="font-whimsy font-bold text-sm sm:text-base text-navy-slate">Baby blankets</span>
-                    <span class="gift-badge mt-1.5 text-[11px] font-whimsy font-bold text-sky-accent">Tap to pick ✨</span>
-                </button>
-
-                <!-- 7. Baby essentials -->
-                <button type="button" onclick="selectGiftCard(this, 'Baby essentials')"
-                        class="gift-card group relative bg-gradient-to-b from-[#FFF3F7] to-cream-base rounded-3xl p-4 border-2 border-pink-dusty hover:border-gold-antique shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex flex-col items-center text-center cursor-pointer">
-                    <span class="absolute top-2 right-2.5 text-xs opacity-70 group-hover:scale-125 transition-transform">💗</span>
-                    <span class="text-4xl sm:text-5xl mb-2 group-hover:animate-bounce">🛒</span>
-                    <span class="font-whimsy font-bold text-sm sm:text-base text-navy-slate">Baby essentials</span>
-                    <span class="gift-badge mt-1.5 text-[11px] font-whimsy font-bold text-pink-deep">Tap to pick ✨</span>
-                </button>
-
-                <!-- 8. Monetary Gift -->
-                <button type="button" onclick="selectGiftCard(this, 'Monetary Gift')"
-                        class="gift-card group relative bg-gradient-to-b from-[#FFFDF2] to-cream-base rounded-3xl p-4 border-2 border-gold-antique/50 hover:border-gold-antique shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all flex flex-col items-center text-center cursor-pointer">
-                    <span class="absolute top-2 right-2.5 text-xs opacity-70 group-hover:scale-125 transition-transform">💛</span>
-                    <span class="text-4xl sm:text-5xl mb-2 group-hover:animate-bounce">✉️</span>
-                    <span class="font-whimsy font-bold text-sm sm:text-base text-navy-slate">Monetary Gift</span>
-                    <span class="gift-badge mt-1.5 text-[11px] font-whimsy font-bold text-amber-700">Tap to pick ✨</span>
-                </button>
-            </div>
-
-            <!-- Interactive Gift Selection Feedback Box -->
-            <div id="gift-feedback-box" class="hidden mt-5 p-4 rounded-2xl bg-sky-pastel border border-sky-accent/40 text-center font-whimsy font-bold text-sm text-navy-slate"></div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- SECTION 8: INTERACTIVE RSVP & WISHES WALL                         -->
-        <!-- ================================================================= -->
-        <section id="section-rsvp" class="royal-card rounded-[2.25rem] p-6 sm:p-10">
-            <div class="text-center mb-6">
-                <span class="px-4 py-1 rounded-full bg-sky-card text-sky-accent font-whimsy font-bold text-xs uppercase tracking-widest">
-                    💌 Confirm & Send Blessings 💌
-                </span>
-                <h2 class="font-serif-royal text-3xl sm:text-4xl font-bold text-navy-slate mt-2">
-                    RSVP &amp; Wishes for Yohanne Rei
-                </h2>
-                <p class="font-whimsy text-sm text-navy-slate/75 mt-1">
-                    Let us know if you can celebrate with us and leave a sweet prayer or message!
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                <!-- RSVP Form -->
-                <form id="rsvp-form" onsubmit="submitRsvp(event)" class="bg-white/85 rounded-3xl p-5 sm:p-6 border border-gold-antique/45 space-y-4 shadow-sm">
-                    <div>
-                        <label for="guest-name" class="block font-whimsy font-bold text-xs uppercase tracking-wider text-navy-slate mb-1">Your Name / Family</label>
-                        <input id="guest-name" type="text" required placeholder="e.g., Ninong Michael / Ninang Jovy"
-                               class="w-full px-4 py-2.5 rounded-xl bg-sky-pastel/50 border border-sky-card focus:border-sky-accent focus:outline-none text-sm font-medium">
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-3">
-                        <div>
-                            <label for="guest-status" class="block font-whimsy font-bold text-xs uppercase tracking-wider text-navy-slate mb-1">Attendance</label>
-                            <select id="guest-status" class="w-full px-3 py-2.5 rounded-xl bg-sky-pastel/50 border border-sky-card focus:border-sky-accent focus:outline-none text-sm font-semibold">
-                                <option value="Joyfully Attending">Joyfully Attending 🎉</option>
-                                <option value="Sending Prayers">Sending Prayers 🙏</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="guest-pax" class="block font-whimsy font-bold text-xs uppercase tracking-wider text-navy-slate mb-1">No. of Guests</label>
-                            <select id="guest-pax" class="w-full px-3 py-2.5 rounded-xl bg-sky-pastel/50 border border-sky-card focus:border-sky-accent focus:outline-none text-sm font-semibold">
-                                <option value="1">1 Guest</option>
-                                <option value="2">2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4+ Guests</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="guest-wish" class="block font-whimsy font-bold text-xs uppercase tracking-wider text-navy-slate mb-1">Sweet Message / Prayer</label>
-                        <textarea id="guest-wish" rows="3" required placeholder="Write a warm blessing for Baby Yohanne Rei..."
-                                  class="w-full px-4 py-2.5 rounded-xl bg-sky-pastel/50 border border-sky-card focus:border-sky-accent focus:outline-none text-sm font-medium"></textarea>
-                    </div>
-
-                    <button type="submit"
-                            class="w-full py-3 rounded-full bg-gradient-to-r from-sky-accent to-[#357ABD] text-white font-whimsy font-bold text-sm sm:text-base shadow-md hover:opacity-95 active:scale-98 transition cursor-pointer">
-                        ✨ Send RSVP &amp; Blessing ✨
-                    </button>
-
-                    <div id="rsvp-toast" class="hidden p-3 rounded-xl bg-green-50 border border-green-300 text-green-800 text-xs font-whimsy font-bold text-center"></div>
-                </form>
-
-                <!-- Live Wishes Wall -->
-                <div class="bg-gradient-to-b from-sky-pastel/70 to-cream-base rounded-3xl p-5 sm:p-6 border border-sky-accent/30 space-y-3 max-h-[390px] overflow-y-auto">
-                    <h3 class="font-serif-royal text-xl font-bold text-navy-slate flex items-center gap-2">
-                        <span>🧸</span> Blessings Wall
-                    </h3>
-                    <div id="wishes-container" class="space-y-3">
-                        <div class="bg-white/90 p-3.5 rounded-2xl border border-gold-antique/35 shadow-sm">
-                            <div class="flex items-center justify-between">
-                                <span class="font-whimsy font-bold text-sm text-sky-accent">Yohanne Rei's Parents</span>
-                                <span class="text-[11px] px-2 py-0.5 rounded-full bg-sky-card text-navy-slate font-bold">Host 💙</span>
-                            </div>
-                            <p class="text-xs sm:text-sm text-navy-slate/85 mt-1">
-                                "May God's love always surround you, our little prince Yohanne Rei. We can't wait to celebrate this milestone with all of you!"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- SWEET CLOSING FOOTER + CUSTOMIZE DETAILS BUTTON                   -->
-        <!-- ================================================================= -->
-        <footer class="royal-card rounded-[2.25rem] p-8 sm:p-10 text-center relative overflow-hidden">
-            <div class="text-4xl sm:text-5xl animate-teddy mb-3">🧸🎠💙</div>
-            <h2 class="font-script text-4xl sm:text-5xl gold-text-gradient">
-                Thank you for the love! See you there!
-            </h2>
-            <p class="mt-3 max-w-xl mx-auto font-whimsy text-sm sm:text-base font-semibold text-navy-slate/85 leading-relaxed">
-                Your prayers, warm smiles, and presence on Baby Yohanne Rei's Holy Baptism mean the world to our family. May your kindness return to you in endless blessings! ✨
-            </p>
-            <p class="mt-4 font-serif-royal font-bold text-navy-slate">
-                With endless love &amp; gratitude,<br>
-                <span class="text-sky-accent">Baby Yohanne Rei &amp; Family</span>
-            </p>
-
-            <!-- Subtle Customize Modal Trigger -->
-            <div class="mt-6 pt-5 border-t border-gold-antique/30 flex flex-wrap items-center justify-center gap-3">
-                <button type="button" onclick="openCustomizeModal()"
-                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream-base border border-gold-antique text-navy-slate font-whimsy font-bold text-xs hover:bg-gold-light/40 transition cursor-pointer">
-                    ⚙️ Customize Date / Photos / Details
-                </button>
-                <button type="button" onclick="replayEnvelopeIntro()"
-                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-card border border-sky-accent/40 text-navy-slate font-whimsy font-bold text-xs hover:bg-sky-accent hover:text-white transition cursor-pointer">
-                    ✉️ Replay Envelope Intro
-                </button>
-            </div>
-        </footer>
-    </main>
-
-    <!-- ===================================================================== -->
-    <!-- CUSTOMIZE DATE / PHOTOS / DETAILS MODAL                               -->
-    <!-- ===================================================================== -->
-    <div id="customize-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-slate/60 backdrop-blur-sm p-4">
-        <div class="bg-cream-base rounded-3xl border-2 border-gold-antique max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl">
-            <div class="flex items-center justify-between pb-3 border-b border-gold-antique/30">
-                <h3 class="font-serif-royal text-2xl font-bold text-navy-slate">✨ Customize Invitation</h3>
-                <button type="button" onclick="closeCustomizeModal()" class="w-8 h-8 rounded-full bg-pink-dusty text-navy-slate font-bold hover:opacity-80 cursor-pointer">✕</button>
-            </div>
-
-            <div class="mt-4 space-y-4 text-sm">
-                <div>
-                    <label class="block font-whimsy font-bold text-xs uppercase text-navy-slate mb-1">Baptism Date &amp; Time</label>
-                    <input id="edit-datetime" type="datetime-local" value="2026-11-29T05:30"
-                           class="w-full px-3.5 py-2 rounded-xl bg-sky-pastel/60 border border-sky-card font-semibold">
-                </div>
-
-                <div>
-                    <label class="block font-whimsy font-bold text-xs uppercase text-navy-slate mb-1">Church Name &amp; Location</label>
-                    <input id="edit-church" type="text" value="St. John Neumann Parish"
-                           class="w-full px-3.5 py-2 rounded-xl bg-sky-pastel/60 border border-sky-card font-semibold mb-2">
-                    <input id="edit-church-addr" type="text" value="Sicayab, Dipolog City"
-                           class="w-full px-3.5 py-2 rounded-xl bg-sky-pastel/60 border border-sky-card font-semibold">
-                </div>
-
-                <div>
-                    <label class="block font-whimsy font-bold text-xs uppercase text-navy-slate mb-1">Reception Venue &amp; Address</label>
-                    <input id="edit-reception" type="text" value="Barnayja's Residence"
-                           class="w-full px-3.5 py-2 rounded-xl bg-sky-pastel/60 border border-sky-card font-semibold mb-2">
-                    <input id="edit-reception-addr" type="text" value="Blk 4 Lot 2, Rufina Heights, Dicayas, Dipolog City"
-                           class="w-full px-3.5 py-2 rounded-xl bg-sky-pastel/60 border border-sky-card font-semibold">
-                </div>
-
-                <!-- Optional Photo Upload Swaps -->
-                <div class="p-3.5 rounded-2xl bg-sky-pastel/70 border border-sky-card space-y-2.5">
-                    <p class="font-whimsy font-bold text-xs uppercase text-sky-accent">📸 Replace Baby Photos (Optional)</p>
-                    <div>
-                        <label class="block text-xs font-semibold mb-1">Hero Circle Portrait:</label>
-                        <input type="file" accept="image/*" onchange="previewCustomPhoto(event, ['baby-photo-hero', 'baby-photo-3'])" class="text-xs w-full">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold mb-1">Gallery Photo 1:</label>
-                        <input type="file" accept="image/*" onchange="previewCustomPhoto(event, ['baby-photo-1'])" class="text-xs w-full">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold mb-1">Gallery Photo 2:</label>
-                        <input type="file" accept="image/*" onchange="previewCustomPhoto(event, ['baby-photo-2'])" class="text-xs w-full">
-                    </div>
-                </div>
-
-                <div class="flex gap-3 pt-2">
-                    <button type="button" onclick="saveCustomizations()"
-                            class="flex-1 py-2.5 rounded-full bg-sky-accent text-white font-whimsy font-bold shadow hover:opacity-95 cursor-pointer">
-                        Save Changes
-                    </button>
-                    <button type="button" onclick="closeCustomizeModal()"
-                            class="px-5 py-2.5 rounded-full bg-gray-200 text-navy-slate font-whimsy font-bold cursor-pointer">
-                        Close
-                    </button>
-                </div>
+            <!-- FOOTER -->
+            <div style="margin-top: 25px; font-size: 0.9rem; color: #777;">
+                <p>Thank you for the love! See you there! 🎈✨</p>
             </div>
         </div>
     </div>
 
-    <!-- ===================================================================== -->
-    <!-- JAVASCRIPT: ENVELOPE ANIMATION, MUSIC BOX LULLABY, COUNTDOWN & RSVP   -->
-    <!-- ===================================================================== -->
     <script>
-        /* -------------------------------------------------------------------
-         * 1. AMBIENT TWINKLING STARS & FLOATING HEARTS GENERATOR
-         * ------------------------------------------------------------------- */
-        function createAmbientParticles() {
-            const sky = document.getElementById('ambient-sky');
-            const icons = ['✨', '⭐', '💙', '💗', '🌟'];
-            for (let i = 0; i < 22; i++) {
-                const el = document.createElement('span');
-                el.className = 'bg-particle absolute select-none';
-                el.textContent = icons[i % icons.length];
-                el.style.left = Math.random() * 96 + '%';
-                el.style.top = Math.random() * 96 + '%';
-                el.style.fontSize = (12 + Math.random() * 12) + 'px';
-                el.style.animationDelay = (Math.random() * 5) + 's';
-                el.style.animationDuration = (5 + Math.random() * 4) + 's';
-                sky.appendChild(el);
-            }
-        }
-
-        /* -------------------------------------------------------------------
-         * 2. WEB AUDIO API GENTLE MUSIC BOX LULLABY (NO EXTERNAL AUDIO URLS)
-         * ------------------------------------------------------------------- */
-        let audioCtx = null;
-        let isMusicPlaying = false;
-        let lullabyTimer = null;
-
-        // Twinkle Twinkle / Carousel Waltz Lullaby Notes (Hz)
-        const melodyNotes = [
-            { freq: 523.25, dur: 0.45 }, // C5
-            { freq: 523.25, dur: 0.45 }, // C5
-            { freq: 783.99, dur: 0.45 }, // G5
-            { freq: 783.99, dur: 0.45 }, // G5
-            { freq: 880.00, dur: 0.45 }, // A5
-            { freq: 880.00, dur: 0.45 }, // A5
-            { freq: 783.99, dur: 0.85 }, // G5
-            { freq: 698.46, dur: 0.45 }, // F5
-            { freq: 698.46, dur: 0.45 }, // F5
-            { freq: 659.25, dur: 0.45 }, // E5
-            { freq: 659.25, dur: 0.45 }, // E5
-            { freq: 587.33, dur: 0.45 }, // D5
-            { freq: 587.33, dur: 0.45 }, // D5
-            { freq: 523.25, dur: 0.90 }  // C5
-        ];
-        let noteIndex = 0;
-
-        function playMusicBoxTone(freq, duration) {
-            if (!audioCtx) return;
-            const now = audioCtx.currentTime;
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(freq, now);
-
-            // Soft music-box chime envelope
-            gain.gain.setValueAtTime(0.001, now);
-            gain.gain.exponentialRampToValueAtTime(0.08, now + 0.03);
-            gain.gain.exponentialRampToValueAtTime(0.0008, now + duration + 0.35);
-
-            osc.connect(gain);
-            gain.connect(audioCtx.destination);
-
-            osc.start(now);
-            osc.stop(now + duration + 0.4);
-        }
-
-        function startMusicBox() {
-            try {
-                if (!audioCtx) {
-                    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-                    audioCtx = new AudioContextClass();
-                }
-                if (audioCtx.state === 'suspended') {
-                    audioCtx.resume();
-                }
-                if (isMusicPlaying) return;
-
-                isMusicPlaying = true;
-                updateMusicButtonUI();
-
-                const step = () => {
-                    if (!isMusicPlaying) return;
-                    const note = melodyNotes[noteIndex % melodyNotes.length];
-                    playMusicBoxTone(note.freq, note.dur);
-                    noteIndex++;
-                    lullabyTimer = setTimeout(step, note.dur * 1050);
-                };
-                step();
-            } catch (err) {
-                console.warn('Audio playback prevented until user gesture:', err);
-            }
-        }
-
-        function stopMusicBox() {
-            isMusicPlaying = false;
-            clearTimeout(lullabyTimer);
-            updateMusicButtonUI();
-        }
-
-        function toggleMusic() {
-            if (isMusicPlaying) {
-                stopMusicBox();
-            } else {
-                startMusicBox();
-            }
-        }
-
-        function updateMusicButtonUI() {
-            const icon = document.getElementById('music-icon');
-            const label = document.getElementById('music-label');
-            if (isMusicPlaying) {
-                icon.textContent = '🎶';
-                label.textContent = 'Music: On';
-            } else {
-                icon.textContent = '🔇';
-                label.textContent = 'Music: Off';
-            }
-        }
-
-        /* -------------------------------------------------------------------
-         * 3. OPEN MAGIC ENVELOPE & SPARKLE BURST
-         * ------------------------------------------------------------------- */
-        function createSparkleBurst(x, y) {
-            const emojis = ['✨', '⭐', '💙', '💗', '🎠', '🧸'];
-            for (let i = 0; i < 18; i++) {
-                const dot = document.createElement('span');
-                dot.className = 'burst-dot';
-                dot.textContent = emojis[i % emojis.length];
-                dot.style.left = x + 'px';
-                dot.style.top = y + 'px';
-                document.body.appendChild(dot);
-
-                const angle = (Math.PI * 2 * i) / 18;
-                const dist = 65 + Math.random() * 95;
-                const tx = Math.cos(angle) * dist;
-                const ty = Math.sin(angle) * dist;
-
-                requestAnimationFrame(() => {
-                    dot.style.transform = `translate(${tx}px, ${ty}px) scale(1.2)`;
-                    dot.style.opacity = '0';
-                });
-
-                setTimeout(() => dot.remove(), 950);
-            }
-        }
-
-        function openMagicEnvelope(event) {
-            const wrapper = document.getElementById('magic-envelope-wrapper');
-            const overlay = document.getElementById('intro-overlay');
+        function openInvitation() {
+            const envelope = document.getElementById('envelope-screen');
             const main = document.getElementById('main-invitation');
+            const music = document.getElementById('bg-music');
 
-            // Sparkle burst at click coordinates
-            const rect = event.currentTarget.getBoundingClientRect();
-            const cx = rect.left + rect.width / 2;
-            const cy = rect.top + rect.height / 2;
-            createSparkleBurst(cx, cy);
-
-            // Start gentle music-box melody
-            startMusicBox();
-
-            // Unfold envelope flap
-            wrapper.classList.remove('animate-envelope');
-            wrapper.classList.add('envelope-opened');
-
-            // Fade out overlay & reveal main invitation
+            envelope.style.opacity = '0';
             setTimeout(() => {
-                overlay.style.opacity = '0';
-                overlay.style.transform = 'scale(1.04)';
-                main.classList.remove('opacity-0');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }, 650);
-
-            setTimeout(() => {
-                overlay.classList.add('hidden');
-            }, 1550);
+                envelope.style.display = 'none';
+                main.style.display = 'block';
+                music.play().catch(e => console.log("Audio autoplay restricted"));
+            }, 800);
         }
 
-        function replayEnvelopeIntro() {
-            const wrapper = document.getElementById('magic-envelope-wrapper');
-            const overlay = document.getElementById('intro-overlay');
-            wrapper.classList.remove('envelope-opened');
-            wrapper.classList.add('animate-envelope');
-            overlay.classList.remove('hidden');
-            requestAnimationFrame(() => {
-                overlay.style.opacity = '1';
-                overlay.style.transform = 'scale(1)';
-            });
-        }
+        const baptismDate = new Date("March 30, 2026 05:30:00").getTime();
+        const countdownTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = baptismDate - now;
 
-        /* -------------------------------------------------------------------
-         * 4. LIVE COUNTDOWN TIMER TO BABY YOHANNE'S BAPTISM
-         * ------------------------------------------------------------------- */
-        let targetBaptismDate = new Date('2026-11-29T05:30:00');
-
-        function updateCountdown() {
-            const now = new Date();
-            const diff = targetBaptismDate - now;
-
-            const daysEl = document.getElementById('cd-days');
-            const hoursEl = document.getElementById('cd-hours');
-            const minsEl = document.getElementById('cd-mins');
-            const secsEl = document.getElementById('cd-secs');
-
-            if (diff <= 0) {
-                daysEl.textContent = '00';
-                hoursEl.textContent = '00';
-                minsEl.textContent = '00';
-                secsEl.textContent = '00';
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "Today is the joyful day of Baby Yohanne's Baptism! 🎉";
+                clearInterval(countdownTimer);
                 return;
             }
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const mins = Math.floor((diff / 1000 / 60) % 60);
-            const secs = Math.floor((diff / 1000) % 60);
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            daysEl.textContent = String(days).padStart(2, '0');
-            hoursEl.textContent = String(hours).padStart(2, '0');
-            minsEl.textContent = String(mins).padStart(2, '0');
-            secsEl.textContent = String(secs).padStart(2, '0');
-        }
-
-        /* -------------------------------------------------------------------
-         * 5. INTERACTIVE CLICKABLE GIFT CARDS
-         * ------------------------------------------------------------------- */
-        function selectGiftCard(btn, giftName) {
-            const rect = btn.getBoundingClientRect();
-            createSparkleBurst(rect.left + rect.width / 2, rect.top + rect.height / 2);
-
-            // Highlight selected state
-            btn.classList.toggle('ring-4');
-            btn.classList.toggle('ring-gold-antique/60');
-            const badge = btn.querySelector('.gift-badge');
-            const isSelected = btn.classList.contains('ring-4');
-            if (badge) {
-                badge.textContent = isSelected ? 'Chosen with love! 💙' : 'Tap to pick ✨';
-            }
-
-            const feedback = document.getElementById('gift-feedback-box');
-            feedback.classList.remove('hidden');
-            feedback.innerHTML = `🧸✨ Thank you so much for considering <strong>${giftName}</strong> for Baby Yohanne Rei! Your thoughtfulness means the world to us. 💙`;
-        }
-
-        /* -------------------------------------------------------------------
-         * 6. RSVP & WISHES WALL SUBMISSION
-         * ------------------------------------------------------------------- */
-        function submitRsvp(event) {
-            event.preventDefault();
-            const nameInput = document.getElementById('guest-name');
-            const statusInput = document.getElementById('guest-status');
-            const paxInput = document.getElementById('guest-pax');
-            const wishInput = document.getElementById('guest-wish');
-            const container = document.getElementById('wishes-container');
-            const toast = document.getElementById('rsvp-toast');
-
-            const name = nameInput.value.trim();
-            const status = statusInput.value;
-            const pax = paxInput.value;
-            const wish = wishInput.value.trim();
-
-            if (!name || !wish) return;
-
-            const card = document.createElement('div');
-            card.className = 'bg-white/95 p-3.5 rounded-2xl border border-sky-accent/40 shadow-sm transition-all';
-            card.innerHTML = `
-                <div class="flex items-center justify-between gap-2">
-                    <span class="font-whimsy font-bold text-sm text-navy-slate">${escapeHtml(name)}</span>
-                    <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-pink-dusty/60 text-navy-slate font-bold">${escapeHtml(status)} (${escapeHtml(pax)})</span>
-                </div>
-                <p class="text-xs sm:text-sm text-navy-slate/85 mt-1">"${escapeHtml(wish)}"</p>
-            `;
-            container.prepend(card);
-
-            toast.classList.remove('hidden');
-            toast.textContent = `🎉 Thank you, ${name}! Your RSVP and blessing for Baby Yohanne Rei have been posted!`;
-
-            nameInput.value = '';
-            wishInput.value = '';
-        }
-
-        function escapeHtml(str) {
-            return str.replace(/[&<>"']/g, (m) => ({
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#39;'
-            })[m]);
-        }
-
-        /* -------------------------------------------------------------------
-         * 7. CUSTOMIZE MODAL LOGIC (DATE, VENUES, AND PHOTO REPLACEMENTS)
-         * ------------------------------------------------------------------- */
-        function openCustomizeModal() {
-            const modal = document.getElementById('customize-modal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function closeCustomizeModal() {
-            const modal = document.getElementById('customize-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        }
-
-        function previewCustomPhoto(event, targetIds) {
-            const file = event.target.files && event.target.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                targetIds.forEach(id => {
-                    const img = document.getElementById(id);
-                    if (img) img.src = e.target.result;
-                });
-            };
-            reader.readAsDataURL(file);
-        }
-
-        function saveCustomizations() {
-            const dtVal = document.getElementById('edit-datetime').value;
-            const churchName = document.getElementById('edit-church').value.trim();
-            const churchAddr = document.getElementById('edit-church-addr').value.trim();
-            const recName = document.getElementById('edit-reception').value.trim();
-            const recAddr = document.getElementById('edit-reception-addr').value.trim();
-
-            if (dtVal) {
-                targetBaptismDate = new Date(dtVal);
-                const formatted = targetBaptismDate.toLocaleDateString('en-US', {
-                    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
-                });
-                const timeFormatted = targetBaptismDate.toLocaleTimeString('en-US', {
-                    hour: 'numeric', minute: '2-digit'
-                });
-                document.getElementById('display-event-date-subtitle').textContent = `${formatted} • ${timeFormatted}`;
-                document.getElementById('display-time-badge').innerHTML = `⏰ Ceremony Time: <span class="text-sky-accent">${timeFormatted}</span>`;
-                updateCountdown();
-            }
-
-            if (churchName) document.getElementById('display-church-name').textContent = churchName;
-            if (churchAddr) document.getElementById('display-church-address').textContent = churchAddr;
-            if (recName) document.getElementById('display-reception-name').textContent = recName;
-            if (recAddr) document.getElementById('display-reception-address').textContent = recAddr;
-
-            closeCustomizeModal();
-        }
-
-        // Initialize on Window Load
-        window.onload = function() {
-            createAmbientParticles();
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        };
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left`;
+        }, 1000);
     </script>
 </body>
 </html>
